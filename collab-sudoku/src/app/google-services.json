@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "470637299088",
+    "firebase_url": "https://ceg3900-p3.firebaseio.com",
+    "project_id": "ceg3900-p3",
+    "storage_bucket": "ceg3900-p3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470637299088:android:5592407ccb535df2",
+        "android_client_info": {
+          "package_name": "org.moire.opensudoku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "470637299088-sstud8v80frk53m1vmjqpsq5d22hmpkf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.moire.opensudoku",
+            "certificate_hash": "1A953579E82E6174643582B58286782A0F02A9AC"
+          }
+        },
+        {
+          "client_id": "470637299088-0510d365ch4r4ev1kqmlam7pd67375ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgDw-ezLLkTNMPu_tsOdTrFjpyib9kTaY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "470637299088-0510d365ch4r4ev1kqmlam7pd67375ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

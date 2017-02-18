@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.8.0_60ec122465b13b4bb032153ea903e3ecfc32d3e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.8.0_d3cacf328230f5d2bc7ab98a57cf432b5105289a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.8.0_89d57fe5a3f71341a4468fbffc666e094c5e76ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_905f36d11ca4022bccc2494fca00fe3f75488e36/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_eeb7c3362b6c888f4418be60b04d3a84f2febb10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.8.0_7d464a73f6050632fa953d165627c5107d9d3e58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.8.0_d90f4a61bd32faaddb28860a2fab238e154486b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_febe177d8b9a6e61753a3c0175f1469f139edaea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_53fe6ee491e2e881bcc339cd73b55c7f39726f37/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.8.0_907252acef8f93f2211c303a0b6ac0625f697bcf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.8.0_fe5bb1988000322386368e71a2754041ee8a6c86/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.8.0_ad9c6cf363a81219f230c58f19caf767df47080f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_9c2b722a194d62e5e1e1e38668d72fd4c83765f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.8.0_630e8b1d7b1a71fa34c9c846eb53e3f008e6b467/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.8.0_5ce75dd1948cbfb78d2806c10aa5658643676e81/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.8.0_c5c6e6cb4750450f2b01e6bba98b939f33f180a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.8.0_7eabe7e8dfd897ef138871bca7259337cd74d02b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_a99e29302d78052a535b526729010bef7cae3656/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.8.0_82e1ac1ce6f82e49f21cd56ac9ab7a167ba82465/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.8.0_2ff5b6f9973117b2b5115b67c7d4aa5753c5c114/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_86f514a66bdab09f0150d72bf15d20fde9a6c3aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.8.0_3808f1720ff104442415f2aa6748cd5d67383d1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-9.8.0_04f43130d28f4c863db59cd1de262130cac55ef7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="31d385c2eed84828c437184dd1dd5b6764443d65">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a254a4f322147a39838901f6ad837e0c9de3cc73/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.8.0_7e7eae6edc0fd26342f4bb654cb4a1226ce7d680/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.8.0_41ece3a98cd1d5a6f7215e3dd66d56770a8d5218/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="273bb8fea52d93b44a5e6b4fc4aa8f88a2716281">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c07550a230cf01a9f80d9113bb1cfa74d1aa21c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.1_a89e056c971b7a734a61d6d302179075487e9984/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.8.0_e8acac8ef16868fe1aa257fb772ae1d61b756378/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.8.0_a8a42077d9b5f3bd1f11fc7b3cdc9908b519a1f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.8.0_7df60edc407583c1db8ea3f80c56803b0c2be20f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-9.8.0_cb58e86239a368ea6450018256e039bf69b45990/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.8.0_132277a01b93a8707b8099e4d56e460cf3192723/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.8.0_d45b542419032bc679d50ce30ae120de1a3d44b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.8.0_557a86e9c4053268fc313bad2a03ffe5ee2d6161/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.8.0_609496d1acd902218ad317b7fa214fae7158f363/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.8.0_c6ae372f417a1e8806898453df8f1eb3792d176f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_e267cae1ebbfa5d541c3584391958a2173259ece/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_3ac90fb622bc689dbd0e82893ddfe1b6dc80073f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.1_65b636eafd98ea120fd3a8176426d89afcc58ce4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.8.0_f6d52c60113c70f0a56d3bb2e60af29e176eedf0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.8.0_ede4469fbee69d6b9a10749e6fbf61dc15f4ba28/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.8.0_fde2dca637b211037268a246a778640ebd78684a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.8.0_ba0d70c3e4bbbc5243da900f4e7bc28f24a09bec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.8.0_8f13b502f06b294f42825d74044cb4374a869155/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.8.0_7e22f380956062bfd1df4d255f660b7a8f2e66cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-9.8.0_6473b8ea33848a517fa1a84834e5ff71697dca48/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.8.0_6068ee86220776b835a2d7607d2025de60d04e89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.8.0_0c4481ade9d17b4f8229a162115d4cdcc2f42421/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.8.0_c0982aac3e0b6efc87758ccd15fc8e71348763d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_9322519b23d4d4ecbf3be6f5c19ee85a01daba05/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.8.0_97e4173cb8857e52aea5059e312c63b11bf2b8b8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.8.0_a20382c62dec2a310d3c00a92f1105e654c24bf8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-9.8.0_e41aa6209b12bde6980559738d5cdf039eb8513b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.8.0_1095ecec2ea5286d62bce2a793b5f810c37808cc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.8.0_13f6c7690fc9032d86d4447c5944ba68454ceb39/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.8.0_a3ef077081a1a5bdef862a667a5551a0131659f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_7567ee44b9baa2e3faa17ed3054d77ec3b4b10f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.8.0_9c08ea305359b928baa7bbf413736cd980b47bca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.8.0_70a81255bb38d87c1b832b9225ba01029276a82d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-9.8.0_5f90ed944a9f5715f1c24bf9e102a9721944c35f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.8.0_0b90990ab2502e7b26bcbb1964f955af83440bfc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.8.0_734aa76bbd3d38fa0b879f08ee9a965a05c9f845/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/home/ian/IntelliJIDEAProjects/opensudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.8.0_583d52365d9e8dc4ade70a156d16e01274e7816d/classes.dex" />
+    </item>
+
+</items>
