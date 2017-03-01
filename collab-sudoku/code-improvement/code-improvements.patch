@@ -1,0 +1,2009 @@
+Index: app/src/main/java/org/moire/opensudoku/gui/SudokuPlayActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/SudokuPlayActivity.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/SudokuPlayActivity.java	(revision )
+@@ -20,7 +20,6 @@
+ 
+ package org.moire.opensudoku.gui;
+ 
+-import android.app.Activity;
+ import android.app.AlertDialog;
+ import android.app.Dialog;
+ import android.content.ComponentName;
+Index: app/src/main/java/org/moire/opensudoku/gui/Timer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/Timer.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/Timer.java	(revision )
+@@ -57,7 +57,6 @@
+ 		mAccumTime = 0;
+ 	}
+ 
+-
+ 	// ******************************************************************** //
+ 	// Timer Control.
+ 	// ******************************************************************** //
+Index: app/src/main/java/org/moire/opensudoku/game/CellNote.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/game/CellNote.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/game/CellNote.java	(revision )
+@@ -87,7 +87,6 @@
+ 		return new CellNote(notedNumbers);
+ 	}
+ 
+-
+ 	/**
+ 	 * Appends string representation of this object to the given <code>StringBuilder</code>.
+ 	 * You can later recreate object from this string by calling {@link #deserialize(String)}.
+Index: app/src/main/java/org/moire/opensudoku/game/FolderInfo.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/game/FolderInfo.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/game/FolderInfo.java	(date 1487379812000)
+@@ -1,108 +0,0 @@
+-/* 
+- * Copyright (C) 2009 Roman Masek
+- * 
+- * This file is part of OpenSudoku.
+- * 
+- * OpenSudoku is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, either version 3 of the License, or
+- * (at your option) any later version.
+- * 
+- * OpenSudoku is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with OpenSudoku.  If not, see <http://www.gnu.org/licenses/>.
+- * 
+- */
+-
+-package org.moire.opensudoku.game;
+-
+-import org.moire.opensudoku.R;
+-import android.content.Context;
+-
+-/**
+- * Some information about folder, used in FolderListActivity.
+- *
+- * @author romario
+- */
+-public class FolderInfo {
+-
+-	/**
+-	 * Primary key of folder.
+-	 */
+-	public long id;
+-
+-	/**
+-	 * Name of the folder.
+-	 */
+-	public String name;
+-
+-	/**
+-	 * Total count of puzzles in the folder.
+-	 */
+-	public int puzzleCount;
+-
+-	/**
+-	 * Count of solved puzzles in the folder.
+-	 */
+-	public int solvedCount;
+-
+-	/**
+-	 * Count of puzzles in "playing" state in the folder.
+-	 */
+-	public int playingCount;
+-
+-	public FolderInfo() {
+-
+-	}
+-
+-	public FolderInfo(long id, String name) {
+-		this.id = id;
+-		this.name = name;
+-	}
+-
+-	public String getDetail(Context c) {
+-		StringBuilder sb = new StringBuilder();
+-
+-		if (puzzleCount == 0) {
+-			// no puzzles in folder
+-			sb.append(c.getString(R.string.no_puzzles));
+-		} else {
+-			// there are some puzzles
+-			sb.append(puzzleCount == 1 ? c.getString(R.string.one_puzzle) : c.getString(R.string.n_puzzles, puzzleCount));
+-
+-			int unsolvedCount = puzzleCount - solvedCount;
+-
+-			// if there are any playing or unsolved puzzles, add info about them
+-			if (playingCount != 0 || unsolvedCount != 0) {
+-				sb.append(" (");
+-
+-				if (playingCount != 0) {
+-					sb.append(c.getString(R.string.n_playing, playingCount));
+-					if (unsolvedCount != 0) {
+-						sb.append(", ");
+-					}
+-				}
+-
+-				if (unsolvedCount != 0) {
+-					sb.append(c.getString(R.string.n_unsolved, unsolvedCount));
+-				}
+-
+-				sb.append(")");
+-			}
+-
+-			// maybe all puzzles are solved?
+-			if (unsolvedCount == 0 && puzzleCount != 0) {
+-				sb.append(" (").append(c.getString(R.string.all_solved)).append(")");
+-			}
+-
+-		}
+-
+-		return sb.toString();
+-
+-	}
+-
+-}
+Index: app/src/main/java/org/moire/opensudoku/gui/inputmethod/InputMethod.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/inputmethod/InputMethod.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/inputmethod/InputMethod.java	(revision )
+@@ -75,7 +75,6 @@
+ 			Button switchModeButton = (Button) switchModeView;
+ 			switchModeButton.setText(getAbbrName());
+ 			switchModeButton.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#00695c"), 0));
+-			onControlPanelCreated(mInputMethodView);
+ 		}
+ 
+ 		return mInputMethodView;
+@@ -136,10 +135,6 @@
+ 	}
+ 
+ 	protected abstract View createControlPanelView();
+-
+-	protected void onControlPanelCreated(View controlPanel) {
+-
+-	}
+ 
+ 	protected void onActivated() {
+ 	}
+Index: app/src/main/java/org/moire/opensudoku/game/SudokuGame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/game/SudokuGame.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/game/SudokuGame.java	(revision )
+@@ -25,7 +25,6 @@
+ import android.util.Log;
+ 
+ import com.google.firebase.database.DatabaseReference;
+-import com.google.firebase.database.FirebaseDatabase;
+ 
+ import org.moire.opensudoku.game.command.ClearAllNotesCommand;
+ import org.moire.opensudoku.game.command.AbstractCommand;
+Index: app/src/androidTest/java/org/moire/opensudoku/ApplicationTest.java
+===================================================================
+--- app/src/androidTest/java/org/moire/opensudoku/ApplicationTest.java	(date 1487379812000)
++++ app/src/androidTest/java/org/moire/opensudoku/ApplicationTest.java	(date 1487379812000)
+@@ -1,13 +0,0 @@
+-package org.moire.opensudoku;
+-
+-import android.app.Application;
+-import android.test.ApplicationTestCase;
+-
+-/**
+- * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
+- */
+-public class ApplicationTest extends ApplicationTestCase<Application> {
+-    public ApplicationTest() {
+-        super(Application.class);
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/org/moire/opensudoku/gui/inputmethod/IMControlPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/inputmethod/IMControlPanel.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/inputmethod/IMControlPanel.java	(revision )
+@@ -108,11 +108,11 @@
+ 		int numOfCycles = 0;
+ 
+ 		if (id != -1) {
+-			while (!idFound && numOfCycles <= mInputMethods.size()) {
++			while (numOfCycles <= mInputMethods.size()) {
+ 				if (mInputMethods.get(id).isEnabled()) {
+ 					ensureControlPanel(id);
+ 					idFound = true;
+-					break;
++					// Don't need a break here.
+ 				}
+ 
+ 				id++;
+@@ -138,10 +138,6 @@
+ 		if (mActiveMethodIndex != -1) {
+ 			InputMethod activeMethod = mInputMethods.get(mActiveMethodIndex);
+ 			activeMethod.activate();
+-
+-//			if (mHintsQueue != null) {
+-//				mHintsQueue.showOneTimeHint(activeMethod.getInputMethodName(), activeMethod.getNameResID(), activeMethod.getHelpResID());
+-//			}
+ 		}
+ 	}
+ 
+Index: app/src/main/java/org/moire/opensudoku/db/SudokuDatabase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/db/SudokuDatabase.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/db/SudokuDatabase.java	(revision )
+@@ -23,14 +23,10 @@
+ import android.content.ContentValues;
+ import android.content.Context;
+ import android.database.Cursor;
+-import android.database.SQLException;
+ import android.database.sqlite.SQLiteDatabase;
+ import android.database.sqlite.SQLiteQueryBuilder;
+-import android.database.sqlite.SQLiteStatement;
+ import org.moire.opensudoku.game.CellCollection;
+-import org.moire.opensudoku.game.FolderInfo;
+ import org.moire.opensudoku.game.SudokuGame;
+-import org.moire.opensudoku.gui.SudokuListFilter;
+ 
+ /**
+  * Wrapper around opensudoku's database.
+@@ -40,21 +36,13 @@
+  * <p/>
+  * You have to explicitly close connection when you're done with database (see {@link #close()}).
+  * <p/>
+- * This class supports database transactions using {@link #beginTransaction()}, \
+- * {@link #setTransactionSuccessful()} and {@link #endTransaction()}.
+- * See {@link SQLiteDatabase} for details on how to use them.
+- *
+  * @author romario
+  */
+ public class SudokuDatabase {
+ 	public static final String DATABASE_NAME = "opensudoku";
+-
+-
+ 	public static final String SUDOKU_TABLE_NAME = "sudoku";
+ 	public static final String FOLDER_TABLE_NAME = "folder";
+ 
+-	//private static final String TAG = "SudokuDatabase";
+-
+ 	private DatabaseHelper mOpenHelper;
+ 
+ 	public SudokuDatabase(Context context) {
+@@ -62,237 +50,6 @@
+ 	}
+ 
+ 	/**
+-	 * Returns list of puzzle folders.
+-	 *
+-	 * @return
+-	 */
+-	public Cursor getFolderList() {
+-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+-
+-		qb.setTables(FOLDER_TABLE_NAME);
+-
+-		SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+-		return qb.query(db, null, null, null, null, null, "created ASC");
+-	}
+-
+-	/**
+-	 * Returns the folder info.
+-	 *
+-	 * @param folderID Primary key of folder.
+-	 * @return
+-	 */
+-	public FolderInfo getFolderInfo(long folderID) {
+-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+-
+-		qb.setTables(FOLDER_TABLE_NAME);
+-		qb.appendWhere(FolderColumns._ID + "=" + folderID);
+-
+-		Cursor c = null;
+-
+-		try {
+-			SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+-			c = qb.query(db, null, null, null, null, null, null);
+-
+-			if (c.moveToFirst()) {
+-				long id = c.getLong(c.getColumnIndex(FolderColumns._ID));
+-				String name = c.getString(c.getColumnIndex(FolderColumns.NAME));
+-
+-				FolderInfo folderInfo = new FolderInfo();
+-				folderInfo.id = id;
+-				folderInfo.name = name;
+-
+-				return folderInfo;
+-			} else {
+-				return null;
+-			}
+-		} finally {
+-			if (c != null) c.close();
+-		}
+-	}
+-
+-	/**
+-	 * Returns the full folder info - this includes count of games in particular states.
+-	 *
+-	 * @param folderID Primary key of folder.
+-	 * @return
+-	 */
+-	public FolderInfo getFolderInfoFull(long folderID) {
+-		FolderInfo folder = null;
+-
+-		SQLiteDatabase db = null;
+-		Cursor c = null;
+-		try {
+-			db = mOpenHelper.getReadableDatabase();
+-
+-			// selectionArgs: You may include ?s in where clause in the query, which will be replaced by the values from selectionArgs. The values will be bound as Strings.
+-			String q = "select folder._id as _id, folder.name as name, sudoku.state as state, count(sudoku.state) as count from folder left join sudoku on folder._id = sudoku.folder_id where folder._id = " + folderID + " group by sudoku.state";
+-			c = db.rawQuery(q, null);
+-
+-			while (c.moveToNext()) {
+-				long id = c.getLong(c.getColumnIndex(FolderColumns._ID));
+-				String name = c.getString(c.getColumnIndex(FolderColumns.NAME));
+-				int state = c.getInt(c.getColumnIndex(SudokuColumns.STATE));
+-				int count = c.getInt(c.getColumnIndex("count"));
+-
+-				if (folder == null) {
+-					folder = new FolderInfo(id, name);
+-				}
+-
+-				folder.puzzleCount += count;
+-				if (state == SudokuGame.GAME_STATE_COMPLETED) {
+-					folder.solvedCount += count;
+-				}
+-				if (state == SudokuGame.GAME_STATE_PLAYING) {
+-					folder.playingCount += count;
+-				}
+-			}
+-		} finally {
+-			if (c != null) {
+-				c.close();
+-			}
+-		}
+-
+-		return folder;
+-	}
+-
+-	private static final String INBOX_FOLDER_NAME = "Inbox";
+-
+-	/**
+-	 * Returns folder which acts as a holder for puzzles imported without folder.
+-	 * If this folder does not exists, it is created.
+-	 *
+-	 * @return
+-	 */
+-	public FolderInfo getInboxFolder() {
+-		FolderInfo inbox = findFolder(INBOX_FOLDER_NAME);
+-		if (inbox != null) {
+-			inbox = insertFolder(INBOX_FOLDER_NAME, System.currentTimeMillis());
+-		}
+-		return inbox;
+-	}
+-
+-	/**
+-	 * Find folder by name. If no folder is found, null is returned.
+-	 *
+-	 * @param folderName
+-	 * @param db
+-	 * @return
+-	 */
+-	public FolderInfo findFolder(String folderName) {
+-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+-
+-		qb.setTables(FOLDER_TABLE_NAME);
+-		qb.appendWhere(FolderColumns.NAME + " = ?");
+-
+-		Cursor c = null;
+-
+-		try {
+-			SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+-			c = qb.query(db, null, null, new String[]{folderName}, null, null, null);
+-
+-			if (c.moveToFirst()) {
+-				long id = c.getLong(c.getColumnIndex(FolderColumns._ID));
+-				String name = c.getString(c.getColumnIndex(FolderColumns.NAME));
+-
+-				FolderInfo folderInfo = new FolderInfo();
+-				folderInfo.id = id;
+-				folderInfo.name = name;
+-
+-				return folderInfo;
+-			} else {
+-				return null;
+-			}
+-		} finally {
+-			if (c != null) c.close();
+-		}
+-	}
+-
+-	/**
+-	 * Inserts new puzzle folder into the database.
+-	 *
+-	 * @param name    Name of the folder.
+-	 * @param created Time of folder creation.
+-	 * @return
+-	 */
+-	public FolderInfo insertFolder(String name, Long created) {
+-		ContentValues values = new ContentValues();
+-		values.put(FolderColumns.CREATED, created);
+-		values.put(FolderColumns.NAME, name);
+-
+-		long rowId;
+-		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+-		rowId = db.insert(FOLDER_TABLE_NAME, FolderColumns._ID, values);
+-
+-		if (rowId > 0) {
+-			FolderInfo fi = new FolderInfo();
+-			fi.id = rowId;
+-			fi.name = name;
+-			return fi;
+-		}
+-
+-		throw new SQLException(String.format("Failed to insert folder '%s'.", name));
+-	}
+-
+-	/**
+-	 * Updates folder's information.
+-	 *
+-	 * @param folderID Primary key of folder.
+-	 * @param name     New name for the folder.
+-	 */
+-	public void updateFolder(long folderID, String name) {
+-		ContentValues values = new ContentValues();
+-		values.put(FolderColumns.NAME, name);
+-
+-		SQLiteDatabase db = null;
+-		db = mOpenHelper.getWritableDatabase();
+-		db.update(FOLDER_TABLE_NAME, values, FolderColumns._ID + "=" + folderID, null);
+-	}
+-
+-	/**
+-	 * Deletes given folder.
+-	 *
+-	 * @param folderID Primary key of folder.
+-	 */
+-	public void deleteFolder(long folderID) {
+-
+-		// TODO: should run in transaction
+-		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+-		// delete all puzzles in folder we are going to delete
+-		db.delete(SUDOKU_TABLE_NAME, SudokuColumns.FOLDER_ID + "=" + folderID, null);
+-		// delete the folder
+-		db.delete(FOLDER_TABLE_NAME, FolderColumns._ID + "=" + folderID, null);
+-	}
+-
+-	/**
+-	 * Returns list of puzzles in the given folder.
+-	 *
+-	 * @param folderID Primary key of folder.
+-	 * @return
+-	 */
+-	public Cursor getSudokuList(long folderID, SudokuListFilter filter) {
+-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+-
+-		qb.setTables(SUDOKU_TABLE_NAME);
+-		//qb.setProjectionMap(sPlacesProjectionMap);
+-		qb.appendWhere(SudokuColumns.FOLDER_ID + "=" + folderID);
+-
+-		if (filter != null) {
+-			if (!filter.showStateCompleted) {
+-				qb.appendWhere(" and " + SudokuColumns.STATE + "!=" + SudokuGame.GAME_STATE_COMPLETED);
+-			}
+-			if (!filter.showStateNotStarted) {
+-				qb.appendWhere(" and " + SudokuColumns.STATE + "!=" + SudokuGame.GAME_STATE_NOT_STARTED);
+-			}
+-			if (!filter.showStatePlaying) {
+-				qb.appendWhere(" and " + SudokuColumns.STATE + "!=" + SudokuGame.GAME_STATE_PLAYING);
+-			}
+-		}
+-
+-		SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+-		return qb.query(db, null, null, null, null, null, "created DESC");
+-	}
+-
+-	/**
+ 	 * Returns sudoku game object.
+ 	 *
+ 	 * @param sudokuID Primary key of folder.
+@@ -339,101 +96,7 @@
+ 
+ 	}
+ 
+-
+ 	/**
+-	 * Inserts new puzzle into the database.
+-	 *
+-	 * @param folderID Primary key of the folder in which puzzle should be saved.
+-	 * @param sudoku
+-	 * @return
+-	 */
+-	public long insertSudoku(long folderID, SudokuGame sudoku) {
+-		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+-		ContentValues values = new ContentValues();
+-		values.put(SudokuColumns.DATA, sudoku.getCells().serialize());
+-		values.put(SudokuColumns.CREATED, sudoku.getCreated());
+-		values.put(SudokuColumns.LAST_PLAYED, sudoku.getLastPlayed());
+-		values.put(SudokuColumns.STATE, sudoku.getState());
+-		values.put(SudokuColumns.TIME, sudoku.getTime());
+-		values.put(SudokuColumns.PUZZLE_NOTE, sudoku.getNote());
+-		values.put(SudokuColumns.FOLDER_ID, folderID);
+-
+-		long rowId = db.insert(SUDOKU_TABLE_NAME, FolderColumns.NAME, values);
+-		if (rowId > 0) {
+-			return rowId;
+-		}
+-
+-		throw new SQLException("Failed to insert sudoku.");
+-	}
+-
+-	private SQLiteStatement mInsertSudokuStatement;
+-
+-	public long importSudoku(long folderID, SudokuImportParams pars) throws SudokuInvalidFormatException {
+-		if (pars.data == null) {
+-			throw new SudokuInvalidFormatException(pars.data);
+-		}
+-
+-		if (!CellCollection.isValid(pars.data, CellCollection.DATA_VERSION_PLAIN)) {
+-			if (!CellCollection.isValid(pars.data, CellCollection.DATA_VERSION_1)) {
+-				throw new SudokuInvalidFormatException(pars.data);
+-			}
+-		}
+-
+-		if (mInsertSudokuStatement == null) {
+-			SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+-			mInsertSudokuStatement = db.compileStatement(
+-					"insert into sudoku (folder_id, created, state, time, last_played, data, puzzle_note) values (?, ?, ?, ?, ?, ?, ?)"
+-			);
+-		}
+-
+-		mInsertSudokuStatement.bindLong(1, folderID);
+-		mInsertSudokuStatement.bindLong(2, pars.created);
+-		mInsertSudokuStatement.bindLong(3, pars.state);
+-		mInsertSudokuStatement.bindLong(4, pars.time);
+-		mInsertSudokuStatement.bindLong(5, pars.lastPlayed);
+-		mInsertSudokuStatement.bindString(6, pars.data);
+-		if (pars.note == null) {
+-			mInsertSudokuStatement.bindNull(7);
+-		} else {
+-			mInsertSudokuStatement.bindString(7, pars.note);
+-		}
+-
+-		long rowId = mInsertSudokuStatement.executeInsert();
+-		if (rowId > 0) {
+-			return rowId;
+-		}
+-
+-		throw new SQLException("Failed to insert sudoku.");
+-	}
+-
+-	/**
+-	 * Returns List of sudokus to export.
+-	 *
+-	 * @param folderID Id of folder to export, -1 if all folders will be exported.
+-	 * @return
+-	 */
+-	public Cursor exportFolder(long folderID) {
+-		String query = "select f._id as folder_id, f.name as folder_name, f.created as folder_created, s.created, s.state, s.time, s.last_played, s.data, s.puzzle_note from folder f left outer join sudoku s on f._id = s.folder_id";
+-		SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+-		if (folderID != -1) {
+-			query += " where f._id = ?";
+-		}
+-		return db.rawQuery(query, folderID != -1 ? new String[]{String.valueOf(folderID)} : null);
+-	}
+-
+-	/**
+-	 * Returns one concrete sudoku to export. Folder context is not exported in this case.
+-	 *
+-	 * @param sudokuID
+-	 * @return
+-	 */
+-	public Cursor exportSudoku(long sudokuID) {
+-		String query = "select f._id as folder_id, f.name as folder_name, f.created as folder_created, s.created, s.state, s.time, s.last_played, s.data, s.puzzle_note from sudoku s inner join folder f on s.folder_id = f._id where s._id = ?";
+-		SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+-		return db.rawQuery(query, new String[]{String.valueOf(sudokuID)});
+-	}
+-
+-	/**
+ 	 * Updates sudoku game in the database.
+ 	 *
+ 	 * @param sudoku
+@@ -450,34 +113,7 @@
+ 		db.update(SUDOKU_TABLE_NAME, values, SudokuColumns._ID + "=" + sudoku.getId(), null);
+ 	}
+ 
+-
+-	/**
+-	 * Deletes given sudoku from the database.
+-	 *
+-	 * @param sudokuID
+-	 */
+-	public void deleteSudoku(long sudokuID) {
+-		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+-		db.delete(SUDOKU_TABLE_NAME, SudokuColumns._ID + "=" + sudokuID, null);
+-	}
+-
+ 	public void close() {
+-		if (mInsertSudokuStatement != null) {
+-			mInsertSudokuStatement.close();
+-		}
+-
+ 		mOpenHelper.close();
+-	}
+-
+-	public void beginTransaction() {
+-		mOpenHelper.getWritableDatabase().beginTransaction();
+-	}
+-
+-	public void setTransactionSuccessful() {
+-		mOpenHelper.getWritableDatabase().setTransactionSuccessful();
+-	}
+-
+-	public void endTransaction() {
+-		mOpenHelper.getWritableDatabase().endTransaction();
+ 	}
+ }
+Index: app/src/main/java/org/moire/opensudoku/gui/SudokuBoardView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/SudokuBoardView.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/SudokuBoardView.java	(revision )
+@@ -318,13 +318,7 @@
+ 		int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+ 		int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+ 
+-
+-//        Log.d(TAG, "widthMode=" + getMeasureSpecModeString(widthMode));
+-//        Log.d(TAG, "widthSize=" + widthSize);
+-//        Log.d(TAG, "heightMode=" + getMeasureSpecModeString(heightMode));
+-//        Log.d(TAG, "heightSize=" + heightSize);
+-
+-		int width = -1, height = -1;
++		int width, height;
+ 		if (widthMode == MeasureSpec.EXACTLY) {
+ 			width = widthSize;
+ 		} else {
+Index: app/src/main/java/org/moire/opensudoku/game/Cell.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/game/Cell.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/game/Cell.java	(revision )
+@@ -222,7 +222,6 @@
+ 		return mValid;
+ 	}
+ 
+-
+ 	/**
+ 	 * Creates instance from given <code>StringTokenizer</code>.
+ 	 *
+@@ -239,19 +238,6 @@
+ 	}
+ 
+ 	/**
+-	 * Creates instance from given string (string which has been
+-	 * created by {@link #serialize(StringBuilder)} or {@link #serialize()} method).
+-	 * earlier.
+-	 *
+-	 * @param note
+-	 */
+-	public static Cell deserialize(String cellData) {
+-		StringTokenizer data = new StringTokenizer(cellData, "|");
+-		return deserialize(data);
+-	}
+-
+-
+-	/**
+ 	 * Appends string representation of this object to the given <code>StringBuilder</code>.
+ 	 * You can later recreate object from this string by calling {@link #deserialize}.
+ 	 *
+@@ -266,12 +252,6 @@
+ 			data.append("|");
+ 		}
+ 		data.append(mEditable ? "1" : "0").append("|");
+-	}
+-
+-	public String serialize() {
+-		StringBuilder sb = new StringBuilder();
+-		serialize(sb);
+-		return sb.toString();
+ 	}
+ 
+ 	/**
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(date 1487379812000)
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -6,7 +6,7 @@
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.WAKE_LOCK" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+-    >
++
+     <application
+         android:name="android.support.multidex.MultiDexApplication"
+         android:allowBackup="true"
+\ No newline at end of file
+Index: app/src/main/java/org/moire/opensudoku/gui/FolderListActivity.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/FolderListActivity.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/FolderListActivity.java	(date 1487379812000)
+@@ -1,257 +0,0 @@
+-/* 
+- * Copyright (C) 2009 Roman Masek
+- * 
+- * This file is part of OpenSudoku.
+- * 
+- * OpenSudoku is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, either version 3 of the License, or
+- * (at your option) any later version.
+- * 
+- * OpenSudoku is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with OpenSudoku.  If not, see <http://www.gnu.org/licenses/>.
+- * 
+- */
+-
+-package org.moire.opensudoku.gui;
+-
+-import android.app.AlertDialog;
+-import android.app.Dialog;
+-import android.app.ListActivity;
+-import android.content.ComponentName;
+-import android.content.Context;
+-import android.content.DialogInterface;
+-import android.content.Intent;
+-import android.database.Cursor;
+-import android.os.Bundle;
+-import android.util.Log;
+-import android.view.ContextMenu;
+-import android.view.ContextMenu.ContextMenuInfo;
+-import android.view.LayoutInflater;
+-import android.view.Menu;
+-import android.view.MenuItem;
+-import android.view.View;
+-import android.widget.AdapterView;
+-import android.widget.ListView;
+-import android.widget.SimpleCursorAdapter;
+-import android.widget.SimpleCursorAdapter.ViewBinder;
+-import android.widget.TextView;
+-import org.moire.opensudoku.R;
+-import org.moire.opensudoku.db.FolderColumns;
+-import org.moire.opensudoku.db.SudokuDatabase;
+-import org.moire.opensudoku.game.FolderInfo;
+-import org.moire.opensudoku.gui.FolderDetailLoader.FolderDetailCallback;
+-import org.moire.opensudoku.utils.AndroidUtils;
+-
+-/**
+- * List of puzzle's folder. This activity also serves as root activity of application.
+- *
+- * @author romario
+- */
+-public class FolderListActivity extends ListActivity {
+-
+-	public static final int MENU_ITEM_ADD = Menu.FIRST;
+-	public static final int MENU_ITEM_RENAME = Menu.FIRST + 1;
+-	public static final int MENU_ITEM_DELETE = Menu.FIRST + 2;
+-	public static final int MENU_ITEM_ABOUT = Menu.FIRST + 3;
+-	public static final int MENU_ITEM_EXPORT = Menu.FIRST + 4;
+-	public static final int MENU_ITEM_EXPORT_ALL = Menu.FIRST + 5;
+-	public static final int MENU_ITEM_IMPORT = Menu.FIRST + 6;
+-
+-	private static final int DIALOG_ABOUT = 0;
+-	private static final int DIALOG_ADD_FOLDER = 1;
+-	private static final int DIALOG_RENAME_FOLDER = 2;
+-	private static final int DIALOG_DELETE_FOLDER = 3;
+-
+-	private static final String TAG = "FolderListActivity";
+-
+-	private Cursor mCursor;
+-	private SudokuDatabase mDatabase;
+-	private FolderListViewBinder mFolderListBinder;
+-
+-	// input parameters for dialogs
+-	private TextView mAddFolderNameInput;
+-	private TextView mRenameFolderNameInput;
+-	private long mRenameFolderID;
+-	private long mDeleteFolderID;
+-
+-	@Override
+-	protected void onCreate(Bundle savedInstanceState) {
+-		super.onCreate(savedInstanceState);
+-
+-		setContentView(R.layout.folder_list);
+-
+-		setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
+-		// Inform the list we provide context menus for items
+-		getListView().setOnCreateContextMenuListener(this);
+-
+-		mDatabase = new SudokuDatabase(getApplicationContext());
+-		mCursor = mDatabase.getFolderList();
+-		startManagingCursor(mCursor);
+-		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.folder_list_item,
+-				mCursor, new String[]{FolderColumns.NAME, FolderColumns._ID},
+-				new int[]{R.id.name, R.id.detail});
+-		mFolderListBinder = new FolderListViewBinder(this);
+-		adapter.setViewBinder(mFolderListBinder);
+-
+-		setListAdapter(adapter);
+-
+-		// show changelog on first run
+-		Changelog changelog = new Changelog(this);
+-		changelog.showOnFirstRun();
+-	}
+-
+-	@Override
+-	protected void onStart() {
+-		super.onStart();
+-
+-		updateList();
+-	}
+-
+-	@Override
+-	protected void onDestroy() {
+-		super.onDestroy();
+-		mDatabase.close();
+-		mFolderListBinder.destroy();
+-	}
+-
+-	@Override
+-	protected void onSaveInstanceState(Bundle outState) {
+-		super.onSaveInstanceState(outState);
+-
+-		outState.putLong("mRenameFolderID", mRenameFolderID);
+-		outState.putLong("mDeleteFolderID", mDeleteFolderID);
+-	}
+-
+-	@Override
+-	protected void onRestoreInstanceState(Bundle state) {
+-		super.onRestoreInstanceState(state);
+-
+-		mRenameFolderID = state.getLong("mRenameFolderID");
+-		mDeleteFolderID = state.getLong("mDeleteFolderID");
+-	}
+-
+-	@Override
+-	protected Dialog onCreateDialog(int id) {
+-		LayoutInflater factory = LayoutInflater.from(this);
+-
+-		switch (id) {
+-			case DIALOG_ABOUT:
+-				final View aboutView = factory.inflate(R.layout.about, null);
+-				TextView versionLabel = (TextView) aboutView.findViewById(R.id.version_label);
+-				String versionName = AndroidUtils.getAppVersionName(getApplicationContext());
+-				versionLabel.setText(getString(R.string.version, versionName));
+-				return new AlertDialog.Builder(this)
+-						.setIcon(R.mipmap.ic_launcher)
+-						.setTitle(R.string.app_name)
+-						.setView(aboutView)
+-						.setPositiveButton("OK", null)
+-						.create();
+-		}
+-
+-		return null;
+-	}
+-
+-	@Override
+-	protected void onPrepareDialog(int id, Dialog dialog) {
+-		super.onPrepareDialog(id, dialog);
+-
+-		switch (id) {
+-			case DIALOG_ADD_FOLDER:
+-				break;
+-			case DIALOG_RENAME_FOLDER: {
+-				FolderInfo folder = mDatabase.getFolderInfo(mRenameFolderID);
+-				String folderName = folder != null ? folder.name : "";
+-				dialog.setTitle(getString(R.string.rename_folder_title, folderName));
+-				mRenameFolderNameInput.setText(folderName);
+-				break;
+-			}
+-			case DIALOG_DELETE_FOLDER: {
+-				FolderInfo folder = mDatabase.getFolderInfo(mDeleteFolderID);
+-				String folderName = folder != null ? folder.name : "";
+-				dialog.setTitle(getString(R.string.delete_folder_title, folderName));
+-				break;
+-			}
+-		}
+-	}
+-
+-	@Override
+-	public boolean onContextItemSelected(MenuItem item) {
+-		AdapterView.AdapterContextMenuInfo info;
+-		try {
+-			info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+-		} catch (ClassCastException e) {
+-			Log.e(TAG, "bad menuInfo", e);
+-			return false;
+-		}
+-
+-
+-		switch (item.getItemId()) {
+-			case MENU_ITEM_RENAME:
+-				mRenameFolderID = info.id;
+-				showDialog(DIALOG_RENAME_FOLDER);
+-				return true;
+-			case MENU_ITEM_DELETE:
+-				mDeleteFolderID = info.id;
+-				showDialog(DIALOG_DELETE_FOLDER);
+-				return true;
+-		}
+-		return false;
+-	}
+-
+-	@Override
+-	protected void onListItemClick(ListView l, View v, int position, long id) {
+-		Intent i = new Intent(this, SudokuListActivity.class);
+-		i.putExtra(SudokuListActivity.EXTRA_FOLDER_ID, id);
+-		startActivity(i);
+-	}
+-
+-	private void updateList() {
+-		mCursor.requery();
+-	}
+-
+-	private static class FolderListViewBinder implements ViewBinder {
+-		private Context mContext;
+-		private FolderDetailLoader mDetailLoader;
+-
+-
+-		public FolderListViewBinder(Context context) {
+-			mContext = context;
+-			mDetailLoader = new FolderDetailLoader(context);
+-		}
+-
+-		@Override
+-		public boolean setViewValue(View view, Cursor c, int columnIndex) {
+-
+-			switch (view.getId()) {
+-				case R.id.name:
+-					((TextView) view).setText(c.getString(columnIndex));
+-					break;
+-				case R.id.detail:
+-					final long folderID = c.getLong(columnIndex);
+-					final TextView detailView = (TextView) view;
+-					detailView.setText(mContext.getString(R.string.loading));
+-					mDetailLoader.loadDetailAsync(folderID, new FolderDetailCallback() {
+-						@Override
+-						public void onLoaded(FolderInfo folderInfo) {
+-							if (folderInfo != null)
+-								detailView.setText(folderInfo.getDetail(mContext));
+-						}
+-					});
+-			}
+-
+-			return true;
+-		}
+-
+-		public void destroy() {
+-			mDetailLoader.destroy();
+-		}
+-	}
+-
+-
+-}
+Index: app/src/main/java/org/moire/opensudoku/gui/FolderDetailLoader.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/FolderDetailLoader.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/FolderDetailLoader.java	(date 1487379812000)
+@@ -1,88 +0,0 @@
+-/* 
+- * Copyright (C) 2009 Roman Masek
+- * 
+- * This file is part of OpenSudoku.
+- * 
+- * OpenSudoku is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, either version 3 of the License, or
+- * (at your option) any later version.
+- * 
+- * OpenSudoku is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with OpenSudoku.  If not, see <http://www.gnu.org/licenses/>.
+- * 
+- */
+-
+-package org.moire.opensudoku.gui;
+-
+-import java.util.concurrent.ExecutorService;
+-import java.util.concurrent.Executors;
+-
+-import android.content.Context;
+-import android.os.Handler;
+-import android.util.Log;
+-import org.moire.opensudoku.db.SudokuDatabase;
+-import org.moire.opensudoku.game.FolderInfo;
+-
+-/**
+- * Loads details of given folders on one single background thread.
+- * Results are published on GUI thread via {@link FolderDetailCallback} interface.
+- * <p/>
+- * Please note that instance of this class has to be created on GUI thread!
+- * <p/>
+- * You should explicitly call {@link #destroy()} when this object is no longer needed.
+- *
+- * @author romario
+- */
+-public class FolderDetailLoader {
+-
+-	private static final String TAG = "FolderDetailLoader";
+-
+-	private Context mContext;
+-	private SudokuDatabase mDatabase;
+-	private Handler mGuiHandler;
+-	private ExecutorService mLoaderService = Executors.newSingleThreadExecutor();
+-
+-	public FolderDetailLoader(Context context) {
+-		mContext = context;
+-		mDatabase = new SudokuDatabase(mContext);
+-		mGuiHandler = new Handler();
+-	}
+-
+-	public void loadDetailAsync(long folderID, FolderDetailCallback loadedCallback) {
+-		final long folderIDFinal = folderID;
+-		final FolderDetailCallback loadedCallbackFinal = loadedCallback;
+-		mLoaderService.execute(new Runnable() {
+-			@Override
+-			public void run() {
+-				try {
+-					final FolderInfo folderInfo = mDatabase.getFolderInfoFull(folderIDFinal);
+-
+-					mGuiHandler.post(new Runnable() {
+-						@Override
+-						public void run() {
+-							loadedCallbackFinal.onLoaded(folderInfo);
+-						}
+-					});
+-				} catch (Exception e) {
+-					// this is some unimportant background stuff, do not fail
+-					Log.e(TAG, "Error occured while loading full folder info.", e);
+-				}
+-			}
+-		});
+-	}
+-
+-	public void destroy() {
+-		mLoaderService.shutdownNow();
+-		mDatabase.close();
+-	}
+-
+-	public interface FolderDetailCallback {
+-		void onLoaded(FolderInfo folderInfo);
+-	}
+-}
+Index: app/src/main/java/org/moire/opensudoku/utils/StringUtils.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/utils/StringUtils.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/utils/StringUtils.java	(date 1487379812000)
+@@ -1,40 +0,0 @@
+-/* 
+- * Copyright (C) 2009 Roman Masek
+- * 
+- * This file is part of OpenSudoku.
+- * 
+- * OpenSudoku is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, either version 3 of the License, or
+- * (at your option) any later version.
+- * 
+- * OpenSudoku is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with OpenSudoku.  If not, see <http://www.gnu.org/licenses/>.
+- * 
+- */
+-
+-package org.moire.opensudoku.utils;
+-
+-import java.util.Collection;
+-import java.util.Iterator;
+-
+-
+-public class StringUtils {
+-	public static String join(Collection<?> s, String delimiter) {
+-		StringBuilder builder = new StringBuilder();
+-		Iterator<?> iter = s.iterator();
+-		while (iter.hasNext()) {
+-			builder.append(iter.next());
+-			if (iter.hasNext()) {
+-				builder.append(delimiter);
+-			}
+-		}
+-		return builder.toString();
+-	}
+-
+-}
+Index: app/src/main/java/org/moire/opensudoku/gui/GameTimeFormat.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/GameTimeFormat.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/GameTimeFormat.java	(revision )
+@@ -31,7 +31,6 @@
+ 	private static final int TIME_99_99 = 99 * 99 * 1000;
+ 
+ 	private StringBuilder mTimeText = new StringBuilder();
+-	;
+ 	private Formatter mGameTimeFormatter = new Formatter(mTimeText);
+ 
+ 	/**
+Index: app/src/main/java/org/moire/opensudoku/gui/SudokuListActivity.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/SudokuListActivity.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/SudokuListActivity.java	(date 1487379812000)
+@@ -1,425 +0,0 @@
+-/* 
+- * Copyright (C) 2009 Roman Masek
+- * 
+- * This file is part of OpenSudoku.
+- * 
+- * OpenSudoku is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, either version 3 of the License, or
+- * (at your option) any later version.
+- * 
+- * OpenSudoku is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with OpenSudoku.  If not, see <http://www.gnu.org/licenses/>.
+- * 
+- */
+-
+-package org.moire.opensudoku.gui;
+-
+-import java.text.DateFormat;
+-import java.util.Date;
+-
+-import android.app.AlertDialog;
+-import android.app.Dialog;
+-import android.app.ListActivity;
+-import android.content.ComponentName;
+-import android.content.Context;
+-import android.content.DialogInterface;
+-import android.content.Intent;
+-import android.content.SharedPreferences;
+-import android.database.Cursor;
+-import android.graphics.Color;
+-import android.os.Bundle;
+-import android.preference.PreferenceManager;
+-import android.util.Log;
+-import android.view.ContextMenu;
+-import android.view.KeyEvent;
+-import android.view.LayoutInflater;
+-import android.view.Menu;
+-import android.view.MenuItem;
+-import android.view.View;
+-import android.view.ContextMenu.ContextMenuInfo;
+-import android.widget.AdapterView;
+-import android.widget.ListView;
+-import android.widget.SimpleCursorAdapter;
+-import android.widget.TextView;
+-import android.widget.SimpleCursorAdapter.ViewBinder;
+-import org.moire.opensudoku.R;
+-import org.moire.opensudoku.db.SudokuColumns;
+-import org.moire.opensudoku.db.SudokuDatabase;
+-import org.moire.opensudoku.game.FolderInfo;
+-import org.moire.opensudoku.game.CellCollection;
+-import org.moire.opensudoku.game.SudokuGame;
+-import org.moire.opensudoku.gui.FolderDetailLoader.FolderDetailCallback;
+-import org.moire.opensudoku.utils.AndroidUtils;
+-
+-/**
+- * List of puzzles in folder.
+- *
+- * @author romario
+- */
+-public class SudokuListActivity extends ListActivity {
+-
+-	public static final String EXTRA_FOLDER_ID = "folder_id";
+-
+-	public static final int MENU_ITEM_INSERT = Menu.FIRST;
+-	public static final int MENU_ITEM_DELETE = Menu.FIRST + 2;
+-	public static final int MENU_ITEM_PLAY = Menu.FIRST + 3;
+-	public static final int MENU_ITEM_RESET = Menu.FIRST + 4;
+-	public static final int MENU_ITEM_EDIT_NOTE = Menu.FIRST + 5;
+-	public static final int MENU_ITEM_FILTER = Menu.FIRST + 6;
+-	public static final int MENU_ITEM_FOLDERS = Menu.FIRST + 7;
+-
+-	private static final int DIALOG_DELETE_PUZZLE = 0;
+-	private static final int DIALOG_RESET_PUZZLE = 1;
+-	private static final int DIALOG_EDIT_NOTE = 2;
+-	private static final int DIALOG_FILTER = 3;
+-
+-	private static final String FILTER_STATE_NOT_STARTED = "filter" + SudokuGame.GAME_STATE_NOT_STARTED;
+-	private static final String FILTER_STATE_PLAYING = "filter" + SudokuGame.GAME_STATE_PLAYING;
+-	private static final String FILTER_STATE_SOLVED = "filter" + SudokuGame.GAME_STATE_COMPLETED;
+-
+-	private static final String TAG = "SudokuListActivity";
+-
+-	private long mFolderID;
+-
+-	// input parameters for dialogs
+-	private long mDeletePuzzleID;
+-	private long mResetPuzzleID;
+-	private long mEditNotePuzzleID;
+-	private TextView mEditNoteInput;
+-	private SudokuListFilter mListFilter;
+-
+-	private TextView mFilterStatus;
+-
+-	private SimpleCursorAdapter mAdapter;
+-	private Cursor mCursor;
+-	private SudokuDatabase mDatabase;
+-	private FolderDetailLoader mFolderDetailLoader;
+-
+-	@Override
+-	protected void onCreate(Bundle savedInstanceState) {
+-		super.onCreate(savedInstanceState);
+-
+-		// theme must be set before setContentView
+-		AndroidUtils.setThemeFromPreferences(this);
+-
+-		setContentView(R.layout.sudoku_list);
+-		mFilterStatus = (TextView) findViewById(R.id.filter_status);
+-
+-		getListView().setOnCreateContextMenuListener(this);
+-		setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
+-
+-		mDatabase = new SudokuDatabase(getApplicationContext());
+-		mFolderDetailLoader = new FolderDetailLoader(getApplicationContext());
+-
+-		Intent intent = getIntent();
+-		if (intent.hasExtra(EXTRA_FOLDER_ID)) {
+-			mFolderID = intent.getLongExtra(EXTRA_FOLDER_ID, 0);
+-		} else {
+-			Log.d(TAG, "No 'folder_id' extra provided, exiting.");
+-			finish();
+-			return;
+-		}
+-
+-		final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+-		mListFilter = new SudokuListFilter(getApplicationContext());
+-		mListFilter.showStateNotStarted = settings.getBoolean(FILTER_STATE_NOT_STARTED, true);
+-		mListFilter.showStatePlaying = settings.getBoolean(FILTER_STATE_PLAYING, true);
+-		mListFilter.showStateCompleted = settings.getBoolean(FILTER_STATE_SOLVED, true);
+-
+-		mAdapter = new SimpleCursorAdapter(this, R.layout.sudoku_list_item,
+-				null, new String[]{SudokuColumns.DATA, SudokuColumns.STATE,
+-				SudokuColumns.TIME, SudokuColumns.LAST_PLAYED,
+-				SudokuColumns.CREATED, SudokuColumns.PUZZLE_NOTE},
+-				new int[]{R.id.sudoku_board, R.id.state, R.id.time,
+-						R.id.last_played, R.id.created, R.id.note});
+-		mAdapter.setViewBinder(new SudokuListViewBinder(this));
+-		updateList();
+-		setListAdapter(mAdapter);
+-	}
+-
+-	@Override
+-	protected void onDestroy() {
+-		super.onDestroy();
+-
+-		mDatabase.close();
+-		mFolderDetailLoader.destroy();
+-	}
+-
+-	@Override
+-	protected void onSaveInstanceState(Bundle outState) {
+-		super.onSaveInstanceState(outState);
+-
+-		outState.putLong("mDeletePuzzleID", mDeletePuzzleID);
+-		outState.putLong("mResetPuzzleID", mResetPuzzleID);
+-		outState.putLong("mEditNotePuzzleID", mEditNotePuzzleID);
+-	}
+-
+-	@Override
+-	protected void onRestoreInstanceState(Bundle state) {
+-		super.onRestoreInstanceState(state);
+-
+-		mDeletePuzzleID = state.getLong("mDeletePuzzleID");
+-		mResetPuzzleID = state.getLong("mResetPuzzleID");
+-		mEditNotePuzzleID = state.getLong("mEditNotePuzzleID");
+-	}
+-
+-	@Override
+-	protected void onResume() {
+-		super.onResume();
+-		// the puzzle list is naturally refreshed when the window
+-		// regains focus, so we only need to update the title
+-		updateTitle();
+-	}
+-
+-	@Override
+-	public boolean onKeyDown(int keyCode, KeyEvent event) {
+-		// if there is no activity in history and back button was pressed, go
+-		// to FolderListActivity, which is the root activity.
+-		if (isTaskRoot() && keyCode == KeyEvent.KEYCODE_BACK) {
+-			Intent i = new Intent();
+-			i.setClass(this, FolderListActivity.class);
+-			startActivity(i);
+-			finish();
+-			return true;
+-		}
+-
+-		return super.onKeyDown(keyCode, event);
+-	}
+-
+-	@Override
+-	public boolean onCreateOptionsMenu(Menu menu) {
+-		super.onCreateOptionsMenu(menu);
+-
+-		// This is our one standard application action -- inserting a
+-		// new note into the list.
+-		menu.add(0, MENU_ITEM_FOLDERS, 0, R.string.folders).setShortcut('1', 'f')
+-				.setIcon(R.drawable.ic_sort);
+-		menu.add(0, MENU_ITEM_FILTER, 1, R.string.filter).setShortcut('1', 'f')
+-				.setIcon(R.drawable.ic_view);
+-		// I'm not sure this one is ready for release
+-//		menu.add(0, MENU_ITEM_GENERATE, 3, R.string.generate_sudoku).setShortcut('4', 'g')
+-//		.setIcon(R.drawable.ic_add);
+-
+-		// Generate any additional actions that can be performed on the
+-		// overall list. In a normal install, there are no additional
+-		// actions found here, but this allows other applications to extend
+-		// our menu with their own actions.
+-		Intent intent = new Intent(null, getIntent().getData());
+-		intent.addCategory(Intent.CATEGORY_ALTERNATIVE);
+-		menu.addIntentOptions(Menu.CATEGORY_ALTERNATIVE, 0, 0,
+-				new ComponentName(this, SudokuListActivity.class), null,
+-				intent, 0, null);
+-
+-		return true;
+-
+-	}
+-
+-	@Override
+-	public boolean onOptionsItemSelected(MenuItem item) {
+-		switch (item.getItemId()) {
+-			case MENU_ITEM_FILTER:
+-				showDialog(DIALOG_FILTER);
+-				return true;
+-			case MENU_ITEM_FOLDERS: {
+-				Intent i = new Intent(this, FolderListActivity.class);
+-				startActivity(i);
+-				finish();
+-				return true;
+-			}
+-		}
+-		return super.onOptionsItemSelected(item);
+-	}
+-
+-	@Override
+-	protected void onListItemClick(ListView l, View v, int position, long id) {
+-		playSudoku(id);
+-	}
+-
+-	/**
+-	 * Updates whole list.
+-	 */
+-	private void updateList() {
+-		updateTitle();
+-		updateFilterStatus();
+-
+-		if (mCursor != null) {
+-			stopManagingCursor(mCursor);
+-		}
+-		mCursor = mDatabase.getSudokuList(mFolderID, mListFilter);
+-		startManagingCursor(mCursor);
+-		mAdapter.changeCursor(mCursor);
+-	}
+-
+-	private void updateFilterStatus() {
+-
+-		if (mListFilter.showStateCompleted && mListFilter.showStateNotStarted && mListFilter.showStatePlaying) {
+-			mFilterStatus.setVisibility(View.GONE);
+-		} else {
+-			mFilterStatus.setText(getString(R.string.filter_active, mListFilter));
+-			mFilterStatus.setVisibility(View.VISIBLE);
+-		}
+-	}
+-
+-	private void updateTitle() {
+-		FolderInfo folder = mDatabase.getFolderInfo(mFolderID);
+-		setTitle(folder.name);
+-
+-		mFolderDetailLoader.loadDetailAsync(mFolderID, new FolderDetailCallback() {
+-			@Override
+-			public void onLoaded(FolderInfo folderInfo) {
+-				if (folderInfo != null)
+-					setTitle(folderInfo.name + " - " + folderInfo.getDetail(getApplicationContext()));
+-			}
+-		});
+-	}
+-
+-	private void playSudoku(long sudokuID) {
+-		Intent i = new Intent(SudokuListActivity.this, SudokuPlayActivity.class);
+-		// i.putExtra(SudokuPlayActivity.EXTRA_SUDOKU_ID, sudokuID);
+-		startActivity(i);
+-	}
+-
+-	private static class SudokuListViewBinder implements ViewBinder {
+-		private Context mContext;
+-		private GameTimeFormat mGameTimeFormatter = new GameTimeFormat();
+-		private DateFormat mDateTimeFormatter = DateFormat.getDateTimeInstance(
+-				DateFormat.SHORT, DateFormat.SHORT);
+-		private DateFormat mTimeFormatter = DateFormat
+-				.getTimeInstance(DateFormat.SHORT);
+-
+-		public SudokuListViewBinder(Context context) {
+-			mContext = context;
+-		}
+-
+-		@Override
+-		public boolean setViewValue(View view, Cursor c, int columnIndex) {
+-
+-			int state = c.getInt(c.getColumnIndex(SudokuColumns.STATE));
+-
+-			TextView label = null;
+-
+-			switch (view.getId()) {
+-				case R.id.sudoku_board:
+-					String data = c.getString(columnIndex);
+-					// TODO: still can be faster, I don't have to call initCollection and read notes
+-					CellCollection cells = null;
+-					;
+-					try {
+-						cells = CellCollection.deserialize(data);
+-					} catch (Exception e) {
+-						long id = c.getLong(c.getColumnIndex(SudokuColumns._ID));
+-						Log.e(TAG, String.format("Exception occurred when deserializing puzzle with id %s.", id), e);
+-					}
+-					SudokuBoardView board = (SudokuBoardView) view;
+-					board.setReadOnly(true);
+-					board.setFocusable(false);
+-					((SudokuBoardView) view).setCells(cells);
+-					break;
+-				case R.id.state:
+-					label = ((TextView) view);
+-					String stateString = null;
+-					switch (state) {
+-						case SudokuGame.GAME_STATE_COMPLETED:
+-							stateString = mContext.getString(R.string.solved);
+-							break;
+-						case SudokuGame.GAME_STATE_PLAYING:
+-							stateString = mContext.getString(R.string.playing);
+-							break;
+-					}
+-					label.setVisibility(stateString == null ? View.GONE
+-							: View.VISIBLE);
+-					label.setText(stateString);
+-					if (state == SudokuGame.GAME_STATE_COMPLETED) {
+-						// TODO: read colors from android resources
+-						label.setTextColor(Color.rgb(150, 150, 150));
+-					} else {
+-						label.setTextColor(Color.rgb(255, 255, 255));
+-						//label.setTextColor(SudokuListActivity.this.getResources().getColor(R.));
+-					}
+-					break;
+-				case R.id.time:
+-					long time = c.getLong(columnIndex);
+-					label = ((TextView) view);
+-					String timeString = null;
+-					if (time != 0) {
+-						timeString = mGameTimeFormatter.format(time);
+-					}
+-					label.setVisibility(timeString == null ? View.GONE
+-							: View.VISIBLE);
+-					label.setText(timeString);
+-					if (state == SudokuGame.GAME_STATE_COMPLETED) {
+-						// TODO: read colors from android resources
+-						label.setTextColor(Color.rgb(150, 150, 150));
+-					} else {
+-						label.setTextColor(Color.rgb(255, 255, 255));
+-					}
+-					break;
+-				case R.id.last_played:
+-					long lastPlayed = c.getLong(columnIndex);
+-					label = ((TextView) view);
+-					String lastPlayedString = null;
+-					if (lastPlayed != 0) {
+-						lastPlayedString = mContext.getString(R.string.last_played_at,
+-								getDateAndTimeForHumans(lastPlayed));
+-					}
+-					label.setVisibility(lastPlayedString == null ? View.GONE
+-							: View.VISIBLE);
+-					label.setText(lastPlayedString);
+-					break;
+-				case R.id.created:
+-					long created = c.getLong(columnIndex);
+-					label = ((TextView) view);
+-					String createdString = null;
+-					if (created != 0) {
+-						createdString = mContext.getString(R.string.created_at,
+-								getDateAndTimeForHumans(created));
+-					}
+-					// TODO: when GONE, note is not correctly aligned below last_played
+-					label.setVisibility(createdString == null ? View.GONE
+-							: View.VISIBLE);
+-					label.setText(createdString);
+-					break;
+-				case R.id.note:
+-					String note = c.getString(columnIndex);
+-					label = ((TextView) view);
+-					if (note == null || note.trim() == "") {
+-						((TextView) view).setVisibility(View.GONE);
+-					} else {
+-						((TextView) view).setText(note);
+-					}
+-					label
+-							.setVisibility((note == null || note.trim().equals("")) ? View.GONE
+-									: View.VISIBLE);
+-					label.setText(note);
+-					break;
+-			}
+-
+-			return true;
+-		}
+-
+-		private String getDateAndTimeForHumans(long datetime) {
+-			Date date = new Date(datetime);
+-
+-			Date now = new Date(System.currentTimeMillis());
+-			Date today = new Date(now.getYear(), now.getMonth(), now.getDate());
+-			Date yesterday = new Date(System.currentTimeMillis()
+-					- (1000 * 60 * 60 * 24));
+-
+-			if (date.after(today)) {
+-				return mContext.getString(R.string.at_time, mTimeFormatter.format(date));
+-			} else if (date.after(yesterday)) {
+-				return mContext.getString(R.string.yesterday_at_time, mTimeFormatter.format(date));
+-			} else {
+-				return mContext.getString(R.string.on_date, mDateTimeFormatter.format(date));
+-			}
+-
+-		}
+-	}
+-
+-}
+Index: app/src/main/java/org/moire/opensudoku/game/CellCollection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/game/CellCollection.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/game/CellCollection.java	(revision )
+@@ -20,6 +20,8 @@
+ 
+ package org.moire.opensudoku.game;
+ 
++import org.moire.opensudoku.utils.DefaultHashMap;
++
+ import java.util.ArrayList;
+ import java.util.HashMap;
+ import java.util.List;
+@@ -80,23 +82,6 @@
+ 	}
+ 
+ 	/**
+-	 * Return true, if no value is entered in any of cells.
+-	 *
+-	 * @return
+-	 */
+-	public boolean isEmpty() {
+-		for (int r = 0; r < SUDOKU_SIZE; r++) {
+-			for (int c = 0; c < SUDOKU_SIZE; c++) {
+-				Cell cell = mCells[r][c];
+-				if (cell.getValue() != 0)
+-					return false;
+-			}
+-		}
+-		return true;
+-	}
+-
+-
+-	/**
+ 	 * Generates debug game.
+ 	 *
+ 	 * @return
+@@ -145,11 +130,13 @@
+ 
+ 	public void markAllCellsAsValid() {
+ 		mOnChangeEnabled = false;
++
+ 		for (int r = 0; r < SUDOKU_SIZE; r++) {
+ 			for (int c = 0; c < SUDOKU_SIZE; c++) {
+ 				mCells[r][c].setValid(true);
+ 			}
+ 		}
++
+ 		mOnChangeEnabled = true;
+ 		onChange();
+ 	}
+@@ -205,18 +192,6 @@
+ 	}
+ 
+ 	/**
+-	 * Marks all cells as editable.
+-	 */
+-	public void markAllCellsAsEditable() {
+-		for (int r = 0; r < SUDOKU_SIZE; r++) {
+-			for (int c = 0; c < SUDOKU_SIZE; c++) {
+-				Cell cell = mCells[r][c];
+-				cell.setEditable(true);
+-			}
+-		}
+-	}
+-
+-	/**
+ 	 * Marks all filled cells (cells with value other than 0) as not editable.
+ 	 */
+ 	public void markFilledCellsAsNotEditable() {
+@@ -228,7 +203,6 @@
+ 		}
+ 	}
+ 
+-
+ 	/**
+ 	 * Returns how many times each value is used in <code>CellCollection</code>.
+ 	 * Returns map with entry for each value.
+@@ -236,16 +210,17 @@
+ 	 * @return
+ 	 */
+ 	public Map<Integer, Integer> getValuesUseCount() {
+-		Map<Integer, Integer> valuesUseCount = new HashMap<Integer, Integer>();
+-		for (int value = 1; value <= CellCollection.SUDOKU_SIZE; value++) {
+-			valuesUseCount.put(value, 0);
+-		}
++        // Use a DefaultHashMap instance instead of the basic to add support for a default argument
++        // without requiring support for java 8.
++		DefaultHashMap<Integer, Integer> valuesUseCount = new DefaultHashMap<>();
+ 
+ 		for (int r = 0; r < CellCollection.SUDOKU_SIZE; r++) {
+ 			for (int c = 0; c < CellCollection.SUDOKU_SIZE; c++) {
+ 				int value = getCell(r, c).getValue();
+ 				if (value != 0) {
+-					valuesUseCount.put(value, valuesUseCount.get(value) + 1);
++                    // Use a default value of 0 to get past having to initialize the map to zeroes
++                    // and save some time.
++					valuesUseCount.put(value, valuesUseCount.get(value, 0) + 1);
+ 				}
+ 			}
+ 		}
+@@ -310,7 +285,7 @@
+ 	 * created by {@link #serialize(StringBuilder)} or {@link #serialize()} method).
+ 	 * earlier.
+ 	 *
+-	 * @param note
++	 * @param data: The data to deserialize.
+ 	 */
+ 	public static CellCollection deserialize(String data) {
+ 		// TODO: use DATA_PATTERN_VERSION_1 to validate and extract puzzle data
+@@ -332,8 +307,8 @@
+ 	 * to be in format "00002343243202...", where each number represents
+ 	 * cell value, no other information can be set using this method.
+ 	 *
+-	 * @param data
+-	 * @return
++	 * @param data: The data to build the cell collection from.
++	 * @return new CellCollection from the data given.
+ 	 */
+ 	public static CellCollection fromString(String data) {
+ 		// TODO: validate
+@@ -417,40 +392,6 @@
+ 			mChangeListeners.add(listener);
+ 		}
+ 	}
+-
+-	public void removeOnChangeListener(OnChangeListener listener) {
+-		if (listener == null) {
+-			throw new IllegalArgumentException("The listener is null.");
+-		}
+-		synchronized (mChangeListeners) {
+-			if (!mChangeListeners.contains(listener)) {
+-				throw new IllegalStateException("Listener " + listener + " was not registered.");
+-			}
+-			mChangeListeners.remove(listener);
+-		}
+-	}
+-
+-	/**
+-	 * Returns whether change notification is enabled.
+-	 *
+-	 * If true, change notifications are distributed to the listeners
+-	 * registered by {@link #addOnChangeListener(OnChangeListener)}.
+-	 *
+-	 * @return
+-	 */
+-//	public boolean isOnChangeEnabled() {
+-//		return mOnChangeEnabled;
+-//	}
+-//	
+-//	/**
+-//	 * Enables or disables change notifications, that are distributed to the listeners
+-//	 * registered by {@link #addOnChangeListener(OnChangeListener)}.
+-//	 * 
+-//	 * @param onChangeEnabled
+-//	 */
+-//	public void setOnChangeEnabled(boolean onChangeEnabled) {
+-//		mOnChangeEnabled = onChangeEnabled;
+-//	}
+ 
+ 	/**
+ 	 * Notify all registered listeners that something has changed.
+Index: app/src/main/java/org/moire/opensudoku/gui/SeekBarPreference.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/SeekBarPreference.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/SeekBarPreference.java	(revision )
+@@ -220,7 +220,7 @@
+ 	private void updateValueLabel(int progress) {
+ 		if (mValueLabel != null) {
+ 			int value = progress + mMin;
+-			if (mValueFormat != null && mValueFormat != "") {
++			if (mValueFormat != null && !mValueFormat.equals("")) {
+ 				mValueLabel.setText(String.format(mValueFormat, value));
+ 			} else {
+ 				mValueLabel.setText(String.valueOf(value));
+\ No newline at end of file
+Index: app/src/main/java/org/moire/opensudoku/utils/DefaultHashMap.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/utils/DefaultHashMap.java	(revision )
++++ app/src/main/java/org/moire/opensudoku/utils/DefaultHashMap.java	(revision )
+@@ -0,0 +1,19 @@
++package org.moire.opensudoku.utils;
++
++import java.util.HashMap;
++
++/**
++ * Create a HashMap that supports a default value parameter.
++ * Created by ian on 2/17/17.
++ */
++public class DefaultHashMap<K,V> extends HashMap<K,V> {
++    /**
++     * Overload the default HashMap get method with an additional defaultValue parameter.
++     * @param key The key to get from the map
++     * @param defaultValue The value that will be returned if the key doesn't exist.
++     * @return The value for the given key, or defaultValue if the key doesn't exist.
++     */
++    public V get(Object key, V defaultValue) {
++        return containsKey(key) ? super.get(key): defaultValue;
++    }
++}
+Index: app/src/main/java/org/moire/opensudoku/game/CellGroup.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/game/CellGroup.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/game/CellGroup.java	(revision )
+@@ -40,7 +40,6 @@
+ 		mPos++;
+ 	}
+ 
+-
+ 	/**
+ 	 * Validates numbers in given sudoku group - numbers must be unique. Cells with invalid
+ 	 * numbers are marked (see {@link Cell#isValid}).
+@@ -57,6 +56,7 @@
+ 		for (int i = 0; i < mCells.length; i++) {
+ 			Cell cell = mCells[i];
+ 			int value = cell.getValue();
++
+ 			if (cellsByValue.get(value) != null) {
+ 				mCells[i].setValid(false);
+ 				cellsByValue.get(value).setValid(false);
+@@ -72,8 +72,9 @@
+ 	}
+ 
+ 	public boolean contains(int value) {
+-		for (int i = 0; i < mCells.length; i++) {
+-			if (mCells[i].getValue() == value) {
++        // Use a for-each loop instead of a for loop with index counter which is unused.
++		for (Cell cell: mCells) {
++			if (cell.getValue() == value) {
+ 				return true;
+ 			}
+ 		}
+Index: app/src/main/java/org/moire/opensudoku/gui/SudokuListFilter.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/SudokuListFilter.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/SudokuListFilter.java	(date 1487379812000)
+@@ -1,59 +0,0 @@
+-/* 
+- * Copyright (C) 2009 Roman Masek
+- * 
+- * This file is part of OpenSudoku.
+- * 
+- * OpenSudoku is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, either version 3 of the License, or
+- * (at your option) any later version.
+- * 
+- * OpenSudoku is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- * 
+- * You should have received a copy of the GNU General Public License
+- * along with OpenSudoku.  If not, see <http://www.gnu.org/licenses/>.
+- * 
+- */
+-
+-package org.moire.opensudoku.gui;
+-
+-import java.util.ArrayList;
+-import java.util.List;
+-
+-import android.content.Context;
+-
+-import org.moire.opensudoku.R;
+-import org.moire.opensudoku.utils.StringUtils;
+-
+-public class SudokuListFilter {
+-
+-	private Context mContext;
+-
+-	public boolean showStateNotStarted = true;
+-	public boolean showStatePlaying = true;
+-	public boolean showStateCompleted = true;
+-
+-	public SudokuListFilter(Context context) {
+-		mContext = context;
+-	}
+-
+-	@Override
+-	public String toString() {
+-		List<String> visibleStates = new ArrayList<String>();
+-		if (showStateNotStarted) {
+-			visibleStates.add(mContext.getString(R.string.not_started));
+-		}
+-		if (showStatePlaying) {
+-			visibleStates.add(mContext.getString(R.string.playing));
+-		}
+-		if (showStateCompleted) {
+-			visibleStates.add(mContext.getString(R.string.solved));
+-		}
+-		return StringUtils.join(visibleStates, ",");
+-	}
+-
+-
+-}
+Index: app/src/main/java/org/moire/opensudoku/gui/Changelog.java
+===================================================================
+--- app/src/main/java/org/moire/opensudoku/gui/Changelog.java	(date 1487379812000)
++++ app/src/main/java/org/moire/opensudoku/gui/Changelog.java	(date 1487379812000)
+@@ -1,95 +0,0 @@
+-package org.moire.opensudoku.gui;
+-
+-import java.io.IOException;
+-import java.io.InputStream;
+-import java.io.InputStreamReader;
+-import java.io.Reader;
+-
+-import android.app.AlertDialog;
+-import android.content.Context;
+-import android.content.SharedPreferences;
+-import android.content.SharedPreferences.Editor;
+-import android.util.Log;
+-import android.webkit.WebView;
+-import org.moire.opensudoku.R;
+-import org.moire.opensudoku.utils.AndroidUtils;
+-
+-public class Changelog {
+-
+-	private static final String TAG = "Changelog";
+-
+-	private static final String PREF_FILE_CHANGELOG = "changelog";
+-
+-	private Context mContext;
+-	private SharedPreferences mPrefs;
+-
+-	public Changelog(Context context) {
+-		mContext = context;
+-		mPrefs = mContext.getSharedPreferences(PREF_FILE_CHANGELOG, Context.MODE_PRIVATE);
+-	}
+-
+-	public void showOnFirstRun() {
+-		String versionKey = "changelog_" + AndroidUtils.getAppVersionCode(mContext);
+-
+-		if (!mPrefs.getBoolean(versionKey, false)) {
+-			showChangelogDialog();
+-
+-			Editor editor = mPrefs.edit();
+-			editor.putBoolean(versionKey, true);
+-			editor.commit();
+-		}
+-	}
+-
+-	private void showChangelogDialog() {
+-
+-		String changelog = getChangelogFromResources();
+-
+-		WebView webView = new WebView(mContext);
+-		webView.loadData(changelog, "text/html", "utf-8");
+-
+-		AlertDialog changelogDialog = new AlertDialog.Builder(mContext)
+-				.setIcon(R.drawable.ic_info)
+-				.setTitle(R.string.what_is_new)
+-				.setView(webView)
+-				.setPositiveButton(R.string.close, null).create();
+-
+-
+-		changelogDialog.show();
+-	}
+-
+-	private String getChangelogFromResources() {
+-		InputStream is = null;
+-		try {
+-			is = mContext.getResources().openRawResource(R.raw.changelog);
+-
+-			final char[] buffer = new char[0x10000];
+-			StringBuilder out = new StringBuilder();
+-			Reader in = new InputStreamReader(is, "UTF-8");
+-			int read;
+-			do {
+-				read = in.read(buffer, 0, buffer.length);
+-				if (read > 0) {
+-					out.append(buffer, 0, read);
+-				}
+-			} while (read >= 0);
+-
+-			return out.toString();
+-		} catch (IOException e) {
+-			e.printStackTrace();
+-			Log.e(TAG, "Error when reading changelog from raw resources.", e);
+-		} finally {
+-			if (is != null) {
+-				try {
+-					is.close();
+-				} catch (IOException e) {
+-					e.printStackTrace();
+-					Log.e(TAG, "Error when reading changelog from raw resources.", e);
+-				}
+-			}
+-		}
+-
+-		return "";
+-	}
+-
+-
+-}

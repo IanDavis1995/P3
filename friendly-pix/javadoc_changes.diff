@@ -1,0 +1,137 @@
+1,14c1,2
+< /*
+<  * Copyright 2016 Google Inc. All Rights Reserved.
+<  *
+<  * Licensed under the Apache License, Version 2.0 (the "License");
+<  * you may not use this file except in compliance with the License.
+<  * You may obtain a copy of the License at
+<  *
+<  *     http://www.apache.org/licenses/LICENSE-2.0
+<  *
+<  * Unless required by applicable law or agreed to in writing, software
+<  * distributed under the License is distributed on an "AS IS" BASIS,
+<  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+<  * See the License for the specific language governing permissions and
+<  * limitations under the License.
+---
+> /**
+>  * Created by ian on 2/17/17.
+16a5,21
+> public class NewClass {
+> }/*
+>   * Copyright 2016 Google Inc. All Rights Reserved.
+>   *
+>   * Licensed under the Apache License, Version 2.0 (the "License");
+>   * you may not use this file except in compliance with the License.
+>   * You may obtain a copy of the License at
+>   *
+>   *     http://www.apache.org/licenses/LICENSE-2.0
+>   *
+>   * Unless required by applicable law or agreed to in writing, software
+>   * distributed under the License is distributed on an "AS IS" BASIS,
+>   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+>   * See the License for the specific language governing permissions and
+>   * limitations under the License.
+>   */
+> 
+49a55,57
+> /**
+>  * NewPostActivity handles submitting a new image post to the app.
+>  */
+51,52c59,60
+<         EasyPermissions.PermissionCallbacks,
+<         NewPostUploadTaskFragment.TaskCallbacks {
+---
+> EasyPermissions.PermissionCallbacks,
+> NewPostUploadTaskFragment.TaskCallbacks {
+70c78
+<             Manifest.permission.READ_EXTERNAL_STORAGE
+---
+>     Manifest.permission.READ_EXTERNAL_STORAGE
+73a82,85
+>     /**
+>      * Called when the activity is first created.
+>      * @param savedInstanceState: Instance data to restore the activity from.
+>      */
+115c127
+<                             Toast.LENGTH_SHORT).show();
+---
+>                                    Toast.LENGTH_SHORT).show();
+131c143
+<                         postText);
+---
+>                                          postText);
+135a148,151
+>     /**
+>      * When a post finishes uploading to the server, display a dialog to notify the user.
+>      * @param error: A description of any error that occurred on upload.
+>      */
+152a169,173
+>     /**
+>      * Display an image picker dialog to the user, showing images from the camera storage.
+>      *
+>      * Requires proper camera permissions from the user to function.
+>      */
+158,159c179,180
+<                     "This sample will upload a picture from your Camera",
+<                     RC_CAMERA_PERMISSIONS, cameraPerms);
+---
+>                                                "This sample will upload a picture from your Camera",
+>                                                RC_CAMERA_PERMISSIONS, cameraPerms);
+183c204
+<                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+---
+>                                          MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+186c207
+<                 getString(R.string.picture_chooser_title));
+---
+>                                                     getString(R.string.picture_chooser_title));
+188c209
+<                 Parcelable[cameraIntents.size()]));
+---
+>                                                                                    Parcelable[cameraIntents.size()]));
+191a213,218
+>     /**
+>      * Called when the image picker dialog finishes with a result.
+>      * @param requestCode: The code requested when the activity was created (TC_PICK_IMAGE).
+>      * @param resultCode: The code the activity resulted with (RESULT_OK).
+>      * @param data: Will contain the image file the user selected.
+>      */
+214a242,244
+>     /**
+>      * Store data about our selected image before the activity is destroyed for later use.
+>      */
+226a257,261
+>     /**
+>      * Update our thumbnails and/or image preview when our image is resized.
+>      * @param resizedBitmap: The updated bitmap.
+>      * @param mMaxDimension: Denotes whether the thumbnail or full size image was resized.
+>      */
+232c267
+<                     Toast.LENGTH_SHORT).show();
+---
+>                            Toast.LENGTH_SHORT).show();
+246a282,287
+>     /**
+>      * Update permissions after requesting access to the camera from the user.
+>      * @param requestCode: The code that was requested (RC_CAMERA_PERMISSIONS).
+>      * @param permissions: The code that resulted (RESULT_OK).
+>      * @param grantResults: Whether or not the user granted the permissions.
+>      */
+254a296,300
+>     /**
+>      * Handle new permissions being granted to the application.
+>      * @param requestCode: The type of permission that was requested.
+>      * @param perms: The permissions that are granted.
+>      */
+257c303,308
+< 
+---
+>     
+>     /**
+>      * Handle new permission request being denied.
+>      * @param requestCode: The type of permission that was request.
+>      * @param perms: The permissions that are currently granted.
+>      */
+261a313
+> 
